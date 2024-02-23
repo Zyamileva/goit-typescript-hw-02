@@ -1,15 +1,15 @@
 /*
   Використовуйте generics та інтерфейси, щоб виправити помилку в наступних класах:
 */
-interface CT {
+interface MyProps {
   title: string;
 }
 
-class Component {
-  constructor(public props: CT) {}
+class Component<T> {
+  constructor(public props: T) {}
 }
 
-class Page extends Component {
+class Page extends Component<MyProps> {
   pageInfo() {
     console.log(this.props.title);
   }
